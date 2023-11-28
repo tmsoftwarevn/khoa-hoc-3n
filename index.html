@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>3N-Academy</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="./img/landing page/logo.jpg" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div style="
+    position: fixed;
+    right: 20px;
+    bottom: 120px;
+    z-index: 1000;"
+    >
+        <div           
+            style="
+            display: flex;align-items: center;justify-content: center;
+            width: 50px;
+            height: 50px;
+            z-index: 1000;
+            cursor: pointer;
+            ">
+            <div>
+                <i class="fa-solid fa-house-chimney" style="font-size: 30px; color: #0079a9;"></i>
+           </div>
+        </div>
+    </div>      
+    <!-- -----call------- -->
+    <div style="
+        position: fixed;
+        right: 20px;
+        bottom: 40px;
+        z-index: 1000;"
+    >
+        
+            <div 
+            id="call-phone"
+            style="
+            display: flex;align-items: center;justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: white;
+            border-radius: 50%;
+            z-index: 100;
+            cursor: pointer;
+            ">
+            <div class="fa fa-phone" style="font-size: 22px;color: #0079a9;">
+                <a href="tel:0353369565"></a>
+            </div>
+            </div>
+       
+        
+    </div>
+    <!-- <!calllllllll> -->
+    <!-- Toast -->
+    <div class="toast align-items-center text-bg-danger border-0 fade show" role="alert" aria-live="assertive"
+        aria-atomic="true" style="position: fixed;right: 0; z-index: 1000;
+    top: 60px; display: none;" id="toast-modal">
+        <div class="d-flex">
+            <div class="toast-body">
+                Vui lòng nhập đầy đủ thông tin !
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                aria-label="Close"></button>
+        </div>
+    </div>
+    <!-- errrrr -->
+
+    <!-- xac nhan -->
+
+    <div class="toast align-items-center text-bg-primary border-0 fade show" role="alert" aria-live="assertive"
+        aria-atomic="true" style="position: fixed;top: 50%; transform: translate(-50%, -50%);
+    left: 50%; display: none; width: fit-content; text-align: center; z-index: 1000;" id="toast-modal-success">
+        <div class="d-flex">
+            <div class="toast-body" style="font-size: 25px; ">
+                Đăng ký thành công. Cảm ơn bạn đã xác nhận !
+            </div>
+            <button 
+            id = "btn-close-success"
+            type="button" class="btn-close btn-close-white me-2 m-auto" 
+                aria-label="Close"></button>
+                <!-- data-bs-dismiss="toast" -->
+        </div>
+    </div>
+    <!-- ------ -->
+    <div class="container-fluid">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- thong bao err -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid  p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-3 px-lg-4 py-2 py-lg-0 sticky-top shadow-sm"
+                style="display: flex; align-items: center;">
+                <a class="navbar-brand p-0" style="display: flex; align-items: center;">
+                    <img src="img/landing page/logo.jpg" alt="Logo" style="border-radius: 50%">
+                    <div style="width: 5px;"></div>
+                    <div class="header">
+                        <div id="logo-text" class="logo" style="color: #233155;">3N-Academy</div>
+                        <!-- <button id="id-mobile-button" class="mobile-button" data-bs-toggle="modal"
+                            data-bs-target="#searchModal">Mua ngay</button> -->
+                    </div>
+                </a>
+
+                <button id="icon-menu-mb"  >
+ 
+                    <span class="fa fa-bars"></span>
+                </button>
+                <!-- --------mobile---------- -->
+                
+                <!-- ----------mobile------------------ -->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0" style="line-height: 1;">
+                        <a href="#setion1" class="nav-item nav-link active">Giới thiệu</a>
+                        <a href="#setion2" class="nav-item nav-link" style="color: black;">Khóa học</a>
+                        <!-- <a href="#setion3" class="nav-item nav-link">Ưu điểm</a> -->
+                        <a href="#setion3" class="nav-item nav-link">Lợi ích</a>
+                        <!-- <a href="#setion5" class="nav-item nav-link">Kết quả</a> -->
+                        <a href="#setion5" class="nav-item nav-link">Đánh giá</a>
+                        <a href="#setion6" class="nav-item nav-link">Liên hệ</a>
+                    </div>
+                    <butaton type="button"
+                        style="background-color: #0079a9;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: white; height: 45px; width: 150px; font-size: 20px;"
+                        class="btn mx-5" data-bs-toggle="modal" data-bs-target="#searchModal">Đăng kí ngay</i></butaton>
+                       
+                </div>
+            </nav>
+
+
+        </div>
+        <div class="container-banner" style="width: 100% ">
+            <img class="image-banner" src="./img/landing page/banner/banner header.jpg" style="width: 100%;" />
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- Full Screen Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1">
+            <div class="modal-dialog ">
+                <div class="modal-content" id="modal-time-countdown"
+                    style="text-align: center; align-items: center; padding:10px ;background-color: #233155;">
+                    <div>
+                        <h4 style="color: #0079a9;">Đăng ký ngay</h4>
+                        <hr />
+                    </div>
+
+                    <div class="row" style="margin-bottom: 10px; width: 90%;">
+                        <div class="col-3" style=" padding: 3px">
+                            <div class="testimonial-item border rounded text-black "
+                                style="height: 90px; background-color: #0079a9; width: 100%;">
+                                <div id="dayModel" style="font-size: 22px; color: white; margin-top: 20px;"></div>
+                                <p style="color: white;">Ngày</p>
+                            </div>
+                        </div>
+                        <div class="col-3" style=" padding: 3px">
+                            <div class="testimonial-item border rounded text-black "
+                                style="height: 90px;background-color: #0079a9;  width: 100%;">
+                                <div id="hourModel" style="font-size: 22px; color: white;margin-top: 20px;"></div>
+                                <p style="color: white;">Giờ</p>
+                            </div>
+                        </div>
+                        <div class="col-3" style=" padding: 5px">
+                            <div class="testimonial-item border rounded text-black"
+                                style="height: 90px;background-color: #0079a9;  width: 100%;">
+                                <div style="font-size: 22px; color: white;margin-top: 20px;" id="minuteModel"></div>
+                                <p style="color: white;">Phút</p>
+                            </div>
+                        </div>
+                        <div class="col-3" style=" padding: 5px">
+                            <div class="testimonial-item border rounded text-black"
+                                style="height: 90px;background-color: #0079a9;  width: 100%;">
+                                <div id="secondsModel" style="font-size: 22px; color: white;margin-top: 20px;"></div>
+                                <p style="color: white;">Giây</p>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="text" id="idNameModel" class="text-input" placeholder="Họ và Tên">
+                    <input type="text" id="idPhoneModel" class="text-input" placeholder="Số điện thoại">
+                    <input type="text" id="idAddressModel" class="text-input" placeholder="Điạ chỉ">
+                    <select id="idLopModel" style="width: 90%; padding: 9px; border-radius: 4px;" name="Lớp" id="sl">
+                        <option disabled selected value>-- Chọn lớp --</option>
+                        <option value="Offline">Offline</option>
+                        <option value="Online">Online</option>
+                    </select>
+                    <p></p>
+                    <button id="sendDataButton-modal" type="button" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        background-color: #0079a9; color: white; width: 150px; height: 45px; font-size: 20px;"
+                        class="btn ms-3" data-bs-toggle="modal" data-bs-dismiss="modal">Xác nhận</i></button>
+                    <!-- data-bs-toggle="modal"  -->
+                    <!-- data-bs-dismiss="modal" -->
+                    <!-- data-bs-target="#exampleModalToggle2" -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Full Screen Search End -->
+
+        <!-- <div class="khoachcach"></div> -->
+        <!-- About Start -->
+        <div id="setion1" class="container-fluid py-2" style="margin: 15px 0; padding: 0 10px;">
+            <div class="container px-lg-5">
+                <div class="row ">
+                    <div class="col-lg-6 wow fadeInUp " 
+                    style="text-align: justify; align-items: center; line-height: 1.7;"
+                        data-wow-delay="0.1s">
+                        <div>
+                            <h5 style="color: #0079a9;">GIỚI THIỆU MS DUNG
+                            </h5>
+
+                        </div>
+                        <!-- <p class="font-about">Bộ trị nám  của Max cell bao gồm 1 Lọ SERUM DETOX VITA C – COLLAGEN (SERUM DETOX ĐIỀU TRỊ NÁM)  và Bộ đôi MELASMA TREATMENT & WHITENING DAY - NIGHT CREAM (kém điều trị nám Ngày và Đêm) được sản xuất tại nhà máy Happy Secret đạt tiêu chuẩn CGMP ASEAN - Thực hành tốt sản xuất mỹ phẩm, dưới sự giám sát của chuyên gia giàu kinh nghiệm trong ngành dược phẩm tại Hàn quốc KOREA. Phân phối độc quyền bởi Công ty TNHH Mỹ Phẩm – Thẩm Mỹ Hoàng Phương – Số 48 Nguyễn Bá Tòng – Phường 11 – Quận Tân Bình – Thành Phố Hồ Chí Minh.
+                        </p> -->
+                        <li class="pt-4">Xin chào! Tôi là Huỳnh Thuý Kiều Dung, Founder của 3N Group và là một Life & Business Coach.
+                            Tôi đã tốt nghiệp từ Cao Đẳng Kinh Tế Đối Ngoại và Đại Học Thương Mại, nơi tôi đã tích lũy
+                            kiến thức vững chắc về kinh tế và quản lý.</li>
+                        <li class="pt-4">Với hơn 15 năm kinh nghiệm đảm nhiệm các vị trí quản lý và kinh doanh trong nhiều lĩnh vực,
+                            tôi đã thấu hiểu được tầm quan trọng của việc xây dựng Nhân Hiệu và Thương Hiệu, và điều này
+                            xuất phát từ việc thấu hiểu bản thân và làm chủ tư duy. Đó là lý do tại sao tôi đã chọn trở
+                            thành Người Đồng Hành và Định Hướng cho các bạn trẻ có khát khao khởi nghiệp, xây dựng một
+                            cộng đồng các bạn thành công và hướng đến ba chữ T: Thấu Hiểu Bản Thân – Theo Đuổi Đam Mê –
+                            Tự Chủ Tài Chính!</li>
+                        <li class="pt-4">Với vai trò là một Life & Business Coach, tôi cam kết hỗ trợ và tư vấn các bạn trẻ trong
+                            việc hiểu rõ bản thân, khám phá đam mê của mình và xây dựng sự tự chủ tài chính. Tôi tin
+                            rằng mỗi người đều có tiềm năng và khả năng để đạt được thành công và hạnh phúc trong cuộc
+                            sống, và tôi sẽ đồng hành cùng các bạn trên con đường đến với thành công và sự thịnh vượng.
+                        </li>
+                        <li class="pt-4">3N Group là một tổ chức tôi sáng lập gồm 3N Food, 3N Academy, Chè Ngon 3N…, nơi tôi cung cấp
+                            các sản phẩm, dịch vụ tư vấn và đào tạo về pha chế, kinh doanh, phát triển Nhân Hiệu &
+                            Thương Hiệu. Tôi tận dụng kiến thức và kinh nghiệm của mình để giúp các doanh nghiệp và cá
+                            nhân đạt được mục tiêu kinh doanh và phát triển bền vững.</li>
+                        <li class="pt-4">Nếu bạn có khát khao khởi nghiệp, muốn khám phá đam mê và xây dựng tương lai tài chính tự
+                            chủ, hãy liên hệ với tôi. Tôi sẽ là người đồng hành và định hướng cho bạn trên con đường
+                            thành công, giúp bạn thấu hiểu bản thân, theo đuổi đam mê và trở thành chủ nhân tài chính
+                            tương lai của của mình!</li>
+                        <button
+                            style="background-color: #0079a9;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                             color: white; padding: 10px 40px;width: fit-content;margin-top: 30px;margin-bottom: 40px; font-size: 20px; display: flex;align-items: center;"
+                            class="btn ms-3" data-bs-toggle="modal" data-bs-target="#searchModal">Đăng kí
+                            ngay</i></button>
+                    </div>
+                    <div id="img-info-mb" class="col-lg-6" style="align-items: center;display: flex; justify-content: end;">
+                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="img/landing page/anh.jpg"
+                            width="100%" height="auto" style="object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="setion3" class="container-fluid py-5" style="background-color: #233155;">
+            <div class="container px-lg-5">
+                <div class="section-title position-relative text-center mb-4 pb-1 wow fadeInUp" data-wow-delay="0.1s">
+                    <h3 class="position-relative d-inline ps-4" style="color:white;">LỢI ÍCH ĐĂNG KÍ KHÓA HỌC</h3>
+                    <!-- <h5 class="mt-3" style="color:#FFC000;">Hiện tượng những mảng màu tối, các đốm, đen hoặc xám nâu
+                        xuất hiện trên mặt là biểu hiện của nám da. Có rất nhiều nguyên nhân gây ra tình trạng nám da đó
+                        là do:</h5> -->
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow zoomIn px-2" data-wow-delay="0.1s">
+                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                            <img src="./img/pic-1-1.png" height="220px" />
+                            <h5 class="mb-3"></h5>
+                            <p
+                                style="color: #233155; font-size: 15px; font-weight: 700; font-family: Arial, Helvetica, sans-serif;">
+                                Tác động của ánh sáng mặt trời</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow zoomIn px-2" data-wow-delay="0.3s">
+                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                            <img src="./img/pic-2.png" height="220px" />
+                            <h5 class="mb-3"></h5>
+                            <p
+                                style="color: #233155; font-size: 15px; font-weight: 700;font-family: Arial, Helvetica, sans-serif;">
+                                Rối loạn hormone trong cơ thể, di truyền</p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow zoomIn px-2" data-wow-delay="0.6s">
+                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                            <img src="./img/cham-soc-da-mat-maxcell.jpg" height="220px" />
+                            <h5 class="mb-3"></h5>
+                            <p
+                                style="color: #233155; font-size: 15px; font-weight: 700; font-family: Arial, Helvetica, sans-serif;">
+                                chế độ chăm sóc da không đúng cách</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div
+                    style="margin-top: 25px; margin-left: 5px; margin-right: 5px; color: white; font-size: 18px; padding: 0 5px;">
+                    <p>Những phương pháp điều trị nhiều phương pháp khác nhau nám sử dụng kem chống nắng, điều trị bằng
+                        laser, lột da bằng hóa chất ...Tuy nhiên theo nghiên cứu khoa học của viện nghiên cứu Dược phẩm
+                        Hàn quốc đã nghiên cứu qua rất nhiều bệnh lý khác nhau và qua tổng duyệt đã sản xuất ra một loại
+                        sản phẩm được nhiều đánh giá cao trong quá trình điều trị tại các Trung tâm , phòng khám và BV
+                        gia liễu Hàn quốc Đặc trị nám + MAX CELL ngày và đêm</p>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+        <div id="setion2" class="container-fluid newsletter my-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container px-lg-5" style="text-align: center; padding-top: 20px;">
+                <h3 style="color: #0079a9;">KHÓA HỌC CỦA CHÚNG TÔI</h3>
+                <hr />
+                <!-- <p>được sản xuất tại nhà máy Happy Secret đạt tiêu chuẩn CGMP ASEAN - Thực hành tốt sản xuất mỹ phẩm,
+                    dưới sự giám sát của chuyên gia giàu kinh nghiệm trong ngành dược phẩm tại Hàn quốc KOREA</p>
+                <p>MaxCell là 1 trong 5 dòng Dược mỹ phẩm nổi tiếng nhất của Hàn Quốc Được FDA H0a Kỳ chứng nhận và kiểm
+                    định Được Bộ Y Tế Hàn Quốc và Bộ Công an Việt Nam cấp phép lưu hành, có tem chống hàng giả của Bộ
+                    Công An VN Đã phân phối 41 quốc gia trong đó có Việt Nam</p> -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-12 p-2">
+                                <img class="image-sp" src="./img/landing page/anh.jpg"
+                                    style="width: 100%;height: auto; object-fit: contain;" />
+                            </div>
+
+                        </div>
+                        <div class="font-name-product"
+                            style="color: #233155;font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                            Lớp Online:</div>
+                        <!-- <div class="font-name-product">VITA C - COLLAGEN</div> -->
+                        <div class="info-product" style="font-family: 'Times New Roman', Times, serif; font-weight: 600;">
+                            <div class="price-product">4.900.000 đ</div>
+                            <div style="width: 15px;"></div>
+                            <div class="price-product-sale" style="color: #0079a9;">2.500.000 đ</div>
+                        </div>
+
+                        <div class="row ">
+                            <div class="col-12 p-2">
+                                <img class="image-sp" src="./img/landing page/anh.jpg"
+                                    style="width: 100%;height: auto;object-fit: contain;" />
+                            </div>
+                        </div>
+                        <div class="font-name-product"
+                            style="color: #233155;font-weight: bold; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+                            Lớp Offline:</div>
+                        <!-- <div class="font-name-product">DAY - NIGHT CREAM</div> -->
+                        <div class="info-product" style="font-family: 'Times New Roman', Times, serif; font-weight: 600;">
+                            <div class="price-product">8.900.000 đ</div>
+                            <div style="width: 15px;"></div>
+                            <div class="price-product-sale " style="color: #0079a9;">4.900.000 đ</div>
+                        </div>
+                    </div>
+                    <div id="content-product" class="col-md-6 text-center ps-3 pe-2 pt-4" style="text-align: justify;">
+                        <h4 class = "pb-4" style="color: #0079a9;">3 ĐIỀU CAM KẾT VỚI HỌC VIÊN!</h4>
+                        <div class="text-md-start" style="line-height: 1.7;">
+                            <p
+                                style="font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                1. Hỗ Trợ Tận Tâm:</p>
+                            <p>3N Academy Ms. Dung (founder Chè Ngon 3N) trực tiếp giảng dạy chất lượng và nhiệt
+                                huyết, sẵn sàng chia sẻ kiến thức và kinh nghiệm. Những mẹo lựa chọn nguyên liệu như thế
+                                nào để tạo ra những thành phẩm ngon nhất.</p>
+                            <p
+                                style="font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                2. Học Mọi Nơi:</p>
+                            <p>Không chỉ có lớp học trực tiếp mà 3N còn có khóa học online, nên học viên có thể học từ
+                                mọi nơi, tiết kiệm thời gian di chuyển và tận hưởng không khí học tập thoải mái.</p>
+                            <p
+                                style="font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                3. Hội Nhóm Hỗ Trợ:</p>
+                            <p>Khi đến với khóa học của 3N Academy học viên sẽ luôn có đội ngũ hỗ trợ với tất cả tâm
+                                huyết cùng sự nhiệt tình nhất. Không chỉ được Ms.Dung kèm 1:1 mà còn được chuẩn bị sẵn
+                                tưgf A đến Z. Lúc nào trong quá trình học cũng sẽ có những trợ lý túc trực để hỗ trợ.
+                                Luôn có nhóm zalo trao đổi khi học viên gặp vấn đề dù là học trực tiếp hay học trực
+                                tuyến. </p>
+                            <br>
+                            <p><span
+                                    style="color: #0079a9; font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">TẶNG</span>
+                                01 Album ảnh 30 món Chè – trị giá 5tr </p>
+                            <p><span
+                                    style="color: #0079a9; font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">TẶNG</span>
+                                01 Bộ sách 30 món Chè – trị giá 1.5tr</p>
+                            <p><span
+                                    style="color: #0079a9; font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">TẶNG</span>
+                                buổi tư vấn 1:1 kiến thức mở quán hoặc được Nhượng Quyền Chè Ngon 3N phí 0đ – trị
+                                giá 5tr</p>
+                            <p><span
+                                    style="color: #0079a9; font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">TẶNG</span>
+                                gói bảo hành khóa học trọn đời – trị giá 5tr</p>
+                            <p><span
+                                    style="color: #0079a9; font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">TẶNG</span>
+                                gói tư vấn quản lý hàng tồn kho và tối ưu chi phí nguyên vật liệu</p>
+
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+            </div>
+        </div>
+
+        <div class="container-fluid py-5">
+            <div class="container px-lg-5">
+                <div class="row g-4">
+                    <div class="col-lg-7 p-2">
+                        <!-- <div style="display: flex; margin-bottom: 20px;">
+                            <div style="font-size: 40px; color: red; margin-right: 8px;">660K</div>
+                            <div style="font-size: 30px; color: blue;">giảm còn</div>
+                            <div style="font-size: 40px; color: red;">379K</div>
+                        </div> -->
+                        <div class="testimonial-item border rounded text-black p-3 align-items-center text-align"
+                            style="text-align: center; margin-bottom: 10px;">
+                            <butaton type="button"
+                                style="margin:-50px auto 0px; background-color: #0079a9; color:white; width: fit-content; padding: 10px 25px; display: flex;align-items: center; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"
+                                class="btn">Video khóa học</i></butaton>
+
+                            <!-- <div class="row">
+                                <div class="col-4" style="border-right: 1px gray solid;">
+                                    <p>Khách được kiểm tra hàng trước khi thanh toán.</p>
+
+                                </div>
+                                <div class="col-4" style="border-right: 1px gray solid;">
+                                    <p>Trường hợp Khách hàng không đồng ý đơn hàng vui lòng hoàn trả cho người giao
+                                        hàng.</p>
+                                </div>
+                                <div class="col-4">
+                                    <p>Trường hợp Khách hàng không đồng ý đơn hàng vui lòng hoàn trả cho người giao
+                                        hàng.</p>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div style="text-align: center; align-items: center;">
+                            <!-- <iframe width="100%" height="400" src="./Video/KHÓA HỌC 30 MÓN CHÈ HOT 2023 TẠI 3N ACADEMY.mp4" title="YouTube Video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen></iframe> -->
+                            <iframe width="100%" height="430" src="https://www.youtube.com/embed/A33_rgmDEHo"
+                                title="KHÓA HỌC 30 MÓN CHÈ HOT 2023 TẠI 3N ACADEMY" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 p-2" id="time-countdown">
+                        <div class="testimonial-item border rounded text-black p-3"
+                            style="text-align: center;background-color: #233155; padding-bottom: 30px; align-items: center;">
+                            <h5 style="color: #0079a9;">ĐĂNG KÝ NGAY</h5>
+
+                            <p style="color: white;">Thời gian ưu đãi có hạn</p>
+                            <div class="row" style="margin-bottom: 10px; width: 100%; margin-left: 3px;">
+                                <div class="col-3" style=" padding: 3px;">
+                                    <div class="testimonial-item border rounded text-black "
+                                        style="height: 90px; background-color: #0079a9; width: 100%;">
+                                        <div id="day" style="font-size: 22px; color: white; margin-top: 20px;"></div>
+                                        <p style="color: white;">Ngày</p>
+                                    </div>
+                                </div>
+                                <div class="col-3" style=" padding: 3px">
+                                    <div class="testimonial-item border rounded text-black "
+                                        style="height: 90px;background-color: #0079a9;  width: 100%;">
+                                        <div id="hour" style="font-size: 22px; color: white;margin-top: 20px;"></div>
+                                        <p style="color: white;">Giờ</p>
+                                    </div>
+                                </div>
+                                <div class="col-3" style=" padding: 5px">
+                                    <div class="testimonial-item border rounded text-black"
+                                        style="height: 90px;background-color: #0079a9;  width: 100%;">
+                                        <div style="font-size: 22px; color: white;margin-top: 20px;" id="minute">
+                                        </div>
+                                        <p style="color: white;">Phút</p>
+                                    </div>
+                                </div>
+                                <div class="col-3" style=" padding: 5px">
+                                    <div class="testimonial-item border rounded text-black"
+                                        style="height: 90px;background-color: #0079a9;  width: 100%;">
+                                        <div id="seconds" style="font-size: 22px; color: white;margin-top: 20px;">
+                                        </div>
+                                        <p style="color: white;">Giây</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <input type="text" id="id-Name" class="text-input" placeholder="Họ và Tên">
+                            <input type="text" id="id-Phone" class="text-input" placeholder="Số điện thoại">
+                            <input type="text" id="id-Address" class="text-input" placeholder="Địa chỉ">
+                            <select id="id-Lop" style="width: 90%; padding: 9px; border-radius: 4px;" name="Lớp"
+                                id="sl">
+                                <option disabled selected value> -- Chọn lớp -- </option>
+                                <option value="Offline">Offline</option>
+                                <option value="Online">Online</option>
+                            </select>
+
+                            <p></p>
+                            <button id="sendDataButton"
+                                style="cursor: pointer;background-color: #0079a9; color: white; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 20px;padding: 10px 30px;"
+                                class="btn ms-3" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                                data-bs-dismiss="modal">Xác nhận</i></button>
+                            <br />
+                            <!-- <p style="color: white;">Vì vậy, cam kết chất lượng, đảm bảo an toàn là mục tiêu hàng đầu của chúng tôi. Sản phẩm
+                                chúng tôi nhận giấy chứng nhận an toàn về thành phần và quy trình sản xuất.</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="setion5" class="container-fluid py-5" style="background-color: #233155;">
+            <div class="container px-lg-5">
+                <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <h3 class="position-relative d-inline ps-4" style="color: white;">HỌC VIÊN NÓI GÌ VỀ KHOÁ HỌC 30+
+                        CÁC MÓN CHÈ TẠI 3N ACADEMY? </h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 p-2">
+                        <img src="./img/landing page/review 1.jpg" height="auto" width="100%" />
+                    </div>
+                    <div class="col-md-6 p-2">
+                        <img src="./img/landing page/review 2.jpg" height="auto" width="100%" />
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-6 p-2">
+                        <img src="./img/landing page/review 3.jpg" height="auto" width="100%" />
+                    </div>
+                    <div class="col-md-6 p-2">
+                        <img src="./img/landing page/review 4.jpg" height="auto" width="100%" />
+                    </div>
+
+                </div>
+              
+            </div>
+        </div>
+        <!-- Footer Start -->
+        <div id="setion6" class="container-fluid text-light footer mt-5 p-3 wow fadeIn"
+            style="background-color: #233155;" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-2" style="display: flex;align-items: center;justify-content: center;">
+                        <img src="./img/landing page/logo.jpg"
+                            style="width: 150px; height: 150px;  border-radius: 50%;" />
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <h5 class="text-white mb-4">Liên hệ</h5>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>75 Đường số 8, P. An Khánh, Tp. Thủ Đức, Hồ Chí Minh
+                            City, Vietnam</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>098 104 7722</p>
+                        <p><i class="fa fa-envelope me-3"></i>3nchengon@gmail.com</p>
+                        <!-- <p><i class="fa fa-envelope me-3"></i>www.myphammaxcell.com</p> -->
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Danh mục</h5>
+                        <a class="btn btn-link" href="#setion1">Giới thiệu</a>
+                        <a class="btn btn-link" href="#setion2">Khóa học</a>
+                        <a class="btn btn-link" href="#setion3">Lợi ích</a>
+                        <a class="btn btn-link" href="#setion5">Đánh giá</a>
+                        <a class="btn btn-link" href="#setion6">Liên hệ</a>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Nhận tin</h5>
+                        <p>Vui lòng nhập địa chỉ email để nhận bản tin mới nhất của chúng tôi:</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                                placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                    class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Chengon3N</a>, All Right Reserved.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="https://tmsoftware.vn">TM Software</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a> -->
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <!-- ---- toast -->
+
+    <script>
+        var toastEle = document.getElementById("toast-modal");
+        var btn_close_success_ele = document.getElementById("btn-close-success")
+        var toast_modal_success_ele = document.getElementById("toast-modal-success")
+        var countdownDate = new Date("2023-12-26 16:51:00").getTime();  // Replace with your desired countdown end date and time
+
+        var countdownTimer = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countdownDate - now;
+
+            // Calculate days, hours, minutes, and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the countdown
+            document.getElementById("day").innerHTML = days;
+            document.getElementById("dayModel").innerHTML = days;
+            document.getElementById("hour").innerHTML = hours;
+            document.getElementById("hourModel").innerHTML = hours;
+            document.getElementById("minute").innerHTML = minutes;
+            document.getElementById("minuteModel").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+            document.getElementById("secondsModel").innerHTML = seconds;
+
+            // Stop the countdown if the time is up
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                //document.getElementById("countdown").innerHTML = "Countdown is over!";
+                document.getElementById("time-countdown").innerHTML = `
+                <div class="testimonial-item border rounded text-black p-3"
+                            style="text-align: center;background-color: #233155; padding-bottom: 30px; align-items: center;">
+                            <h5 style="color: #0079a9;">Đã hết thời hạn đăng ký !</h5>
+
+                          
+                            <div class="row" style="margin-bottom: 10px; width: 100%; margin-left: 3px;">
+                                <div class="col-3" style=" padding: 3px;">
+                                    <div class="testimonial-item border rounded text-black "
+                                        style="height: 90px; background-color: #0079a9; width: 100%;">
+                                        <div id="day-over" style="font-size: 22px; color: white; margin-top: 20px;"></div>
+                                        <p style="color: white;">Ngày</p>
+                                    </div>
+                                </div>
+                                <div class="col-3" style=" padding: 3px">
+                                    <div class="testimonial-item border rounded text-black "
+                                        style="height: 90px;background-color: #0079a9;  width: 100%;">
+                                        <div id="hour-over" style="font-size: 22px; color: white;margin-top: 20px;"></div>
+                                        <p style="color: white;">Giờ</p>
+                                    </div>
+                                </div>
+                                <div class="col-3" style=" padding: 5px">
+                                    <div class="testimonial-item border rounded text-black"
+                                        style="height: 90px;background-color: #0079a9;  width: 100%;">
+                                        <div style="font-size: 22px; color: white;margin-top: 20px;" id="minute-over">
+                                        </div>
+                                        <p style="color: white;">Phút</p>
+                                    </div>
+                                </div>
+                                <div class="col-3" style=" padding: 5px">
+                                    <div class="testimonial-item border rounded text-black"
+                                        style="height: 90px;background-color: #0079a9;  width: 100%;">
+                                        <div id="seconds-over" style="font-size: 22px; color: white;margin-top: 20px;">
+                                        </div>
+                                        <p style="color: white;">Giây</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <input type="text" id="id-Name-over" class="text-input" placeholder="Họ và Tên">
+                            <input type="text" id="id-Phone-over" class="text-input" placeholder="Số điện thoại">
+                            <input type="text" id="id-Address-over" class="text-input" placeholder="Địa chỉ">
+                            <select style="width: 90%; padding: 9px; border-radius: 4px;" name="Lớp" id="sl">
+                                <option disabled selected value> -- Chọn lớp -- </option>
+                                <option value="Offline">Offline</option>
+                                <option value="Online">Online</option>
+                            </select>
+                            
+                            <p></p>
+                            <button id="sendDataButton1" disabled  
+                                style="cursor: pointer;background-color: #0079a9; color: white; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 20px;padding: 10px 30px;"
+                                class="btn ms-3" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                                data-bs-dismiss="modal">Xác nhận</i></button>        
+                            <br />
+                            
+                        </div>
+                `
+
+                document.getElementById("modal-time-countdown").innerHTML = `
+                <div class="testimonial-item border rounded text-black p-3"
+                            style="text-align: center;background-color: #233155; padding-bottom: 30px; align-items: center;">
+                            <h5 style="color: #0079a9;">Đã hết thời hạn đăng ký !</h5>
+                   
+                            <div class="row" style="margin-bottom: 10px; width: 100%; margin-left: 3px;">
+                                <div class="col-3" style=" padding: 3px;">
+                                    <div class="testimonial-item border rounded text-black "
+                                        style="height: 90px; background-color: #0079a9; width: 100%;">
+                                        <div id="modal-day-over" style="font-size: 22px; color: white; margin-top: 20px;"></div>
+                                        <p style="color: white;">Ngày</p>
+                                    </div>
+                                </div>
+                                <div class="col-3" style=" padding: 3px">
+                                    <div class="testimonial-item border rounded text-black "
+                                        style="height: 90px;background-color: #0079a9;  width: 100%;">
+                                        <div id="modal-hour-over" style="font-size: 22px; color: white;margin-top: 20px;"></div>
+                                        <p style="color: white;">Giờ</p>
+                                    </div>
+                                </div>
+                                <div class="col-3" style=" padding: 5px">
+                                    <div class="testimonial-item border rounded text-black"
+                                        style="height: 90px;background-color: #0079a9;  width: 100%;">
+                                        <div style="font-size: 22px; color: white;margin-top: 20px;" id="modal-minute-over">
+                                        </div>
+                                        <p style="color: white;">Phút</p>
+                                    </div>
+                                </div>
+                                <div class="col-3" style=" padding: 5px">
+                                    <div class="testimonial-item border rounded text-black"
+                                        style="height: 90px;background-color: #0079a9;  width: 100%;">
+                                        <div id="modal-seconds-over" style="font-size: 22px; color: white;margin-top: 20px;">
+                                        </div>
+                                        <p style="color: white;">Giây</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <input type="text" id="id-Name-o" class="text-input" placeholder="Họ và Tên">
+                            <input type="text" id="id-Phone-o" class="text-input" placeholder="Số điện thoại">
+                            <input type="text" id="id-Address-o" class="text-input" placeholder="Địa chỉ">
+                            <select style="width: 90%; padding: 9px; border-radius: 4px;" name="Lớp" id="sl">
+                                <option disabled selected value> -- Chọn lớp -- </option>
+                                <option value="Offline">Offline</option>
+                                <option value="Online">Online</option>
+                            </select>
+                            
+                            <p></p>
+                            <button id="sendDataButton1" disabled  
+                                style="cursor: pointer;background-color: #0079a9; color: white; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 20px;padding: 10px 30px;"
+                                class="btn ms-3" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                                data-bs-dismiss="modal">Xác nhận</i></button>        
+                            <br />
+                            
+                        </div>
+                `
+                document.getElementById("day-over").innerHTML = "0";
+                document.getElementById("modal-day-over").innerHTML = "0";
+                document.getElementById("hour-over").innerHTML = "0";
+                document.getElementById("modal-hour-over").innerHTML = "0";
+                document.getElementById("minute-over").innerHTML = "0";
+                document.getElementById("modal-minute-over").innerHTML = "0";
+                document.getElementById("seconds-over").innerHTML = "0";
+                document.getElementById("modal-seconds-over").innerHTML = "0";
+            }
+        }, 1000);
+
+
+        document.getElementById("sendDataButton-modal").addEventListener("click", function () {
+
+            var input1Value = document.getElementById("idNameModel")?.value;
+            var input2Value = document.getElementById("idPhoneModel")?.value;
+            var input3Value = document.getElementById("idAddressModel")?.value;
+            var input4Value = document.getElementById("idLopModel")?.value;
+
+            var data = {
+                name: input1Value,
+                phone: input2Value,
+                address: input3Value,
+                lop: input4Value
+            };
+
+            if (!input1Value) {
+                document.getElementById("idNameModel").style.border = "2px solid red"
+                document.getElementById("idNameModel").focus();
+                toastEle.style.display = "block"
+                var h = setTimeout(() => {
+                    toastEle.style.display = "none";
+                }, 3000)
+                return;
+            } else {
+                document.getElementById("idNameModel").style.border = "none"
+            }
+            var check = /(03|05|07|08|09)+([0-9]{8})\b/.test(input2Value);
+            if (!check) {
+                document.getElementById("idPhoneModel").style.border = "2px solid red"
+                document.getElementById("idPhoneModel").focus();
+                toastEle.style.display = "block"
+                var h = setTimeout(() => {
+                    toastEle.style.display = "none";
+                }, 3000)
+                return;
+            } else {
+                document.getElementById("idPhoneModel").style.border = "none"
+            }
+            if (!input3Value) {
+                document.getElementById("idAddressModel").style.border = "2px solid red"
+                document.getElementById("idAddressModel").focus();
+                toastEle.style.display = "block"
+                var h = setTimeout(() => {
+                    toastEle.style.display = "none";
+                }, 3000)
+                return;
+            } else {
+                document.getElementById("idAddressModel").style.border = "none"
+            }
+            if (!input4Value) {
+                document.getElementById("idLopModel").style.border = "2px solid red"
+                document.getElementById("idLopModel").focus();
+                toastEle.style.display = "block"
+                var h = setTimeout(() => {
+                    toastEle.style.display = "none";
+                }, 3000)
+                return;
+            } else {
+                document.getElementById("idLopModel").style.border = "none"
+            }
+            console.log("check form modalllll: ", data)
+            toast_modal_success_ele.style.display = "block";
+
+            fetch('https://script.google.com/macros/s/AKfycby_FCYgmmtRGnVl7iD43WUMJSXYNMhLBzAZLOu_krOSKqD1AvqNzLLofubd0YIlAtyCZQ/exec', {
+                method: 'POST',
+                body: JSON.stringify({ data: data })
+            })
+                .then(response => response.json())
+                .then(result => {
+                    console.log(result);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+
+
+        document.getElementById("sendDataButton").addEventListener("click", function () {
+            var input1Value = document.getElementById("id-Name").value;
+            var input2Value = document.getElementById("id-Phone").value;
+            var input3Value = document.getElementById("id-Address").value;
+            var input4Value = document.getElementById("id-Lop").value;
+
+            var data = {
+                name: input1Value,
+                phone: input2Value,
+                address: input3Value,
+                lop: input4Value
+            };
+
+            if (!input1Value) {
+                document.getElementById("id-Name").style.border = "2px solid red"
+                document.getElementById("id-Name").focus();
+                toastEle.style.display = "block"
+                var h = setTimeout(() => {
+                    toastEle.style.display = "none";
+                }, 3000)
+                return;
+            } else {
+                document.getElementById("id-Name").style.border = "none"
+            }
+            var check = /(03|05|07|08|09)+([0-9]{8})\b/.test(input2Value);
+            if (!check) {
+                document.getElementById("id-Phone").style.border = "2px solid red"
+                document.getElementById("id-Phone").focus();
+                toastEle.style.display = "block"
+                var h = setTimeout(() => {
+                    toastEle.style.display = "none";
+                }, 3000)
+                return;
+            } else {
+                document.getElementById("id-Phone").style.border = "none"
+            }
+            if (!input3Value) {
+                document.getElementById("id-Address").style.border = "2px solid red"
+                document.getElementById("id-Address").focus();
+                toastEle.style.display = "block"
+                var h = setTimeout(() => {
+                    toastEle.style.display = "none";
+                }, 3000)
+                return;
+            } else {
+                document.getElementById("id-Address").style.border = "none"
+            }
+            if (!input4Value) {
+                document.getElementById("id-Lop").style.border = "2px solid red"
+                document.getElementById("id-Lop").focus();
+                toastEle.style.display = "block"
+                var h = setTimeout(() => {
+                    toastEle.style.display = "none";
+                }, 3000)
+                return;
+            } else {
+                document.getElementById("id-Lop").style.border = "none"
+            }
+            toast_modal_success_ele.style.display = "block";
+
+            console.log("check form data: ", data)
+            fetch('https://script.google.com/macros/s/AKfycby_FCYgmmtRGnVl7iD43WUMJSXYNMhLBzAZLOu_krOSKqD1AvqNzLLofubd0YIlAtyCZQ/exec', {
+                method: 'POST',
+                body: JSON.stringify({ data: data })
+            })
+                .then(response => response.json())
+                .then(result => {
+                    console.log(result);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+        
+        document.getElementById("btn-close-success").addEventListener("click", function () {
+            toast_modal_success_ele.style.display = 'none';
+
+        });
+        document.getElementById("icon-menu-mb").addEventListener("click", function(){
+            
+            if( document.getElementById("navbarCollapse").style.display === "block"){
+                document.getElementById("navbarCollapse").style.display = "none";
+            }
+            else{
+                document.getElementById("navbarCollapse").style.display = "block";
+            }
+            
+        })
+    </script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
