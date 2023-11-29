@@ -224,7 +224,7 @@ h6,
     height: 4px;
     bottom: 0;
     left: 0;
-    background: var(--dark);
+    background: #0079a9;
 }
 
 .section-title::after {
@@ -234,7 +234,7 @@ h6,
     height: 4px;
     bottom: 0;
     left: 50px;
-    background: var(--dark);
+    background: #0079a9;
 }
 
 .section-title.text-center::before {
@@ -620,7 +620,13 @@ h6,
 }
 
 @media only screen and (max-device-width: 480px) {
-    
+    #box-img-info{
+       bottom: 11% !important;
+    }
+    .box-img-info-icon{
+        width: 32px !important;
+        height: 32px !important;
+    }
     #toast-modal-success{
     position: fixed;
     left: 10px !important;

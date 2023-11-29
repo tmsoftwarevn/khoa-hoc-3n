@@ -105,7 +105,7 @@
         aria-atomic="true" style="position: fixed;top: 50%; transform: translate(-50%, -50%);
     left: 50%; display: none; width: fit-content; text-align: center; z-index: 1000;" id="toast-modal-success">
         <div class="d-flex">
-            <div class="toast-body" style="font-size: 25px; ">
+            <div class="toast-body" style="font-size: 20px; ">
                 Đăng ký thành công. Cảm ơn bạn đã xác nhận !
             </div>
             <button 
@@ -135,10 +135,12 @@
                 <a class="navbar-brand p-0" style="display: flex; align-items: center;">
                     <img src="img/landing page/logo.jpg" alt="Logo" style="border-radius: 50%">
                     <div style="width: 5px;"></div>
-                    <div class="header">
+                    <!-- <div class="header">
                         <div id="logo-text" class="logo" style="color: #233155;">3N-Academy</div>
-                        <!-- <button id="id-mobile-button" class="mobile-button" data-bs-toggle="modal"
-                            data-bs-target="#searchModal">Mua ngay</button> -->
+                        
+                    </div> -->
+                    <div class="header-img-logo">
+                        <img src="img/landing page/logo text.png" width="100%" height="auto">
                     </div>
                 </a>
 
@@ -242,7 +244,7 @@
             <div class="container px-lg-5">
                 <div class="row ">
                     <div class="col-lg-6 wow fadeInUp " 
-                    style="text-align: justify; align-items: center; line-height: 1.7;"
+                    style="text-align: justify; align-items: center; line-height: 1.7; font-size: 18px;"
                         data-wow-delay="0.1s">
                         <div>
                             <h5 style="color: #0079a9;">GIỚI THIỆU MS DUNG
@@ -251,7 +253,7 @@
                         </div>
                         <!-- <p class="font-about">Bộ trị nám  của Max cell bao gồm 1 Lọ SERUM DETOX VITA C – COLLAGEN (SERUM DETOX ĐIỀU TRỊ NÁM)  và Bộ đôi MELASMA TREATMENT & WHITENING DAY - NIGHT CREAM (kém điều trị nám Ngày và Đêm) được sản xuất tại nhà máy Happy Secret đạt tiêu chuẩn CGMP ASEAN - Thực hành tốt sản xuất mỹ phẩm, dưới sự giám sát của chuyên gia giàu kinh nghiệm trong ngành dược phẩm tại Hàn quốc KOREA. Phân phối độc quyền bởi Công ty TNHH Mỹ Phẩm – Thẩm Mỹ Hoàng Phương – Số 48 Nguyễn Bá Tòng – Phường 11 – Quận Tân Bình – Thành Phố Hồ Chí Minh.
                         </p> -->
-                        <li class="pt-4">Xin chào! Tôi là Huỳnh Thuý Kiều Dung, Founder của 3N Group và là một Life & Business Coach.
+                        <li class="pt-1">Xin chào! Tôi là Huỳnh Thuý Kiều Dung, Founder của 3N Group và là một Life & Business Coach.
                             Tôi đã tốt nghiệp từ Cao Đẳng Kinh Tế Đối Ngoại và Đại Học Thương Mại, nơi tôi đã tích lũy
                             kiến thức vững chắc về kinh tế và quản lý.</li>
                         <li class="pt-4">Với hơn 15 năm kinh nghiệm đảm nhiệm các vị trí quản lý và kinh doanh trong nhiều lĩnh vực,
@@ -279,33 +281,36 @@
                             class="btn ms-3" data-bs-toggle="modal" data-bs-target="#searchModal">Đăng kí
                             ngay</i></button>
                     </div>
-                    <div id="img-info-mb" class="col-lg-6" 
-                        style="align-items: center;display: flex; justify-content: end;position: relative;">
-                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="img/landing page/anh dai dien 2.jpg"
+                    <div id="img-info-mb" class="col-lg-6" style="align-items: center;display: flex; justify-content: end;">
+                        
+                        <div style="position: relative;">
+                            <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="img/landing page/anh dai dien 2.jpg"
                             width="100%" height="auto" style="object-fit: contain;">
-                        <div style="
-                        position: absolute;bottom: 22%;left: 50%; transform: translateX(-50%);
-                        display: flex;margin-left: 5px;
-                        ">
-                        <a href="https://www.tiktok.com/@msdung3n/video/7304235578097159432">
-                            <div style="width: 50px;height: 50px;
-                            border-radius: 50%;background-color: transparent; cursor: pointer;
-                           ">
-                           </div>
-                        </a>
-                        <a href="mailto:3nchengon@gmail.com">
-                            <div style="width: 50px;height: 50px;
-                            border-radius: 50%;background-color: transparent; cursor: pointer;
-                           ">
-                           </div>
-                        </a>    
-                        <a href="tel:0981047722">
-                            <div style="width: 50px;height: 50px;
-                            border-radius: 50%;background-color: transparent; cursor: pointer;
-                           ">
-                           </div>
-                        </a>   
-                        </div>
+                            <div id="box-img-info"
+                            style="
+                            position: absolute;bottom: 10%;left: 50%; transform: translateX(-50%);
+                            display: flex;;
+                            ">
+                            <a href="https://www.tiktok.com/@msdung3n/">
+                                <div style="width: 50px;height: 50px; 
+                                border-radius: 50%;background-color: transparent; cursor: pointer;
+                               " class="box-img-info-icon">
+                               </div>
+                            </a>
+                            <a href="mailto:3nchengon@gmail.com">
+                                <div style="width: 50px;height: 50px;
+                                border-radius: 50%;background-color: transparent; cursor: pointer;
+                               " class="box-img-info-icon">
+                               </div>
+                            </a>    
+                            <a href="tel:0981047722">
+                                <div style="width: 50px;height: 50px;
+                                border-radius: 50%;background-color: transparent; cursor: pointer;
+                               " class="box-img-info-icon">
+                               </div>
+                            </a>   
+                            </div>
+                        </div>                      
                         
                     </div>
                 </div>
@@ -322,41 +327,41 @@
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow zoomIn px-2" data-wow-delay="0.1s">
                         <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                            <img src="./img/pic-1-1.png" height="220px" />
+                            <img src="./img/landing page/chi viec.jpg" height="220px" style="border-radius: 10px;"/>
                             <h5 class="mb-3"></h5>
                             <p
                                 style="color: #233155; font-size: 15px; font-weight: 700; font-family: Arial, Helvetica, sans-serif;">
-                                Tác động của ánh sáng mặt trời</p>
+                                Cầm tay chỉ việc không giấu nghề</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow zoomIn px-2" data-wow-delay="0.3s">
                         <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                            <img src="./img/pic-2.png" height="220px" />
+                            <img src="./img/landing page/dong hanh.jpg" height="220px" style="border-radius: 10px;"/>
                             <h5 class="mb-3"></h5>
                             <p
                                 style="color: #233155; font-size: 15px; font-weight: 700;font-family: Arial, Helvetica, sans-serif;">
-                                Rối loạn hormone trong cơ thể, di truyền</p>
+                                Đồng hành khởi nghiệp, kinh doanh sau khóa học</p>
 
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow zoomIn px-2" data-wow-delay="0.6s">
                         <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                            <img src="./img/cham-soc-da-mat-maxcell.jpg" height="220px" />
+                            <img src="./img/landing page/0 dong.jpg" height="220px" style="border-radius: 10px;"/>
                             <h5 class="mb-3"></h5>
                             <p
                                 style="color: #233155; font-size: 15px; font-weight: 700; font-family: Arial, Helvetica, sans-serif;">
-                                chế độ chăm sóc da không đúng cách</p>
+                                Nhượng quyền 0đ Chè Ngon 3N</p>
                         </div>
                     </div>
 
                 </div>
                 <div
                     style="margin-top: 25px; margin-left: 5px; margin-right: 5px; color: white; font-size: 18px; padding: 0 5px;">
-                    <p>Những phương pháp điều trị nhiều phương pháp khác nhau nám sử dụng kem chống nắng, điều trị bằng
+                    <!-- <p>Những phương pháp điều trị nhiều phương pháp khác nhau nám sử dụng kem chống nắng, điều trị bằng
                         laser, lột da bằng hóa chất ...Tuy nhiên theo nghiên cứu khoa học của viện nghiên cứu Dược phẩm
                         Hàn quốc đã nghiên cứu qua rất nhiều bệnh lý khác nhau và qua tổng duyệt đã sản xuất ra một loại
                         sản phẩm được nhiều đánh giá cao trong quá trình điều trị tại các Trung tâm , phòng khám và BV
-                        gia liễu Hàn quốc Đặc trị nám + MAX CELL ngày và đêm</p>
+                        gia liễu Hàn quốc Đặc trị nám + MAX CELL ngày và đêm</p> -->
                 </div>
             </div>
         </div>
@@ -381,7 +386,8 @@
 
                         </div>
                         <div class="font-name-product"
-                            style="color: #233155;font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                            style="font-size: 18px;
+                            color: #233155;font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
                             Lớp Online:</div>
                         <!-- <div class="font-name-product">VITA C - COLLAGEN</div> -->
                         <div class="info-product" style="font-family: 'Times New Roman', Times, serif; font-weight: 600;">
@@ -397,7 +403,8 @@
                             </div>
                         </div>
                         <div class="font-name-product"
-                            style="color: #233155;font-weight: bold; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+                            style="font-size: 18px;
+                            color: #233155;font-weight: bold; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
                             Lớp Offline:</div>
                         <!-- <div class="font-name-product">DAY - NIGHT CREAM</div> -->
                         <div class="info-product" style="font-family: 'Times New Roman', Times, serif; font-weight: 600;">
@@ -407,7 +414,7 @@
                         </div>
                     </div>
                     <div id="content-product" class="col-md-6 text-center ps-3 pe-2 pt-4" style="text-align: justify;">
-                        <h4 class = "pb-4" style="color: #0079a9;">3 ĐIỀU CAM KẾT VỚI HỌC VIÊN!</h4>
+                        <h4 class = "pb-4" style="color: #0079a9;font-weight: 500;">3 ĐIỀU CAM KẾT VỚI HỌC VIÊN!</h4>
                         <div class="text-md-start" style="line-height: 1.7;">
                             <p
                                 style="font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
